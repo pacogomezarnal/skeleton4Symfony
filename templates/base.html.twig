@@ -3,10 +3,26 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="stylesheet" href="/css/w3.css">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div class="w3-bar w3-indigo">
+          <a href="#" class="w3-bar-item w3-button">Inicio</a>
+          <a href="#" class="w3-bar-item w3-button">Link 1</a>
+          <a href="#" class="w3-bar-item w3-button">Link 2</a>
+          <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        </div>
+        <div class="w3-display-container">
+          <img class="mySlides" src="img/img01.jpg" style="width:100%">
+          <img class="mySlides" src="img/img02.jpg" style="width:100%">
+          <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+          <button class="w3-button w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+        </div>
+        <div class="w3-container">
+          {% block body %}{% endblock %}
+        </div>
+        <script type="text/javascript" src="js/codigo.js"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

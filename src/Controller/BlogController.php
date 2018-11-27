@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 
 class BlogController extends AbstractController
 {
@@ -13,8 +14,8 @@ class BlogController extends AbstractController
    *
    * @Route("/", name="homepage")
    */
-   public function homepage()
+   public function homepage(Request $request)
    {
-        return new Response('PAgina inicial de nuestro Blog');
+        return $this->render('home.html.twig');
    }
 }
